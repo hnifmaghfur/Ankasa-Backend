@@ -1,10 +1,14 @@
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOSTNAME || "localhost",
-  user: process.env.DB_USERNAME || "root",
-  password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_DATABASE || "ticketing",
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "ticketing",
+  // host: process.env.DB_HOSTNAME || "localhost",
+  // user: process.env.DB_USERNAME || "root",
+  // password: process.env.DB_PASSWORD || "",
+  // database: process.env.DB_DATABASE || "ticketing",
 });
 
 exports.connection = connection;
